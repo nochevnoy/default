@@ -1,0 +1,2 @@
+# default
+only for study
