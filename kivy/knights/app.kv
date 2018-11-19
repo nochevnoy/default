@@ -28,6 +28,20 @@
         font_size: self.height - dp(30)
 
         on_press: root.reset_game()
+
+    Label:
+        id: player1_points
+        text: '10'
+        size_hint: .5, .5
+        pos_hint: {'x': 0, 'center_y': 0.65}
+
+    Label:
+        id: player2_points
+        text: '10'
+        size_hint: .5, .5
+        pos_hint: {'x': 0.5, 'center_y': 0.65}
+        
+
         
 
     AnchorLayout
