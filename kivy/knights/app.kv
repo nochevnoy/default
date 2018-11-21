@@ -30,16 +30,44 @@
         on_press: root.reset_game()
 
     Label:
-        id: player1_points
-        text: '10'
+        text: 'SKILL POINTS'
+        size_hint: .2, .2
+        pos_hint: {'x': 0.1, 'center_y': 0.65}
+        font_size: 20
+
+    Label:
+        text: 'SKILL POINTS'
         size_hint: .5, .5
-        pos_hint: {'x': 0, 'center_y': 0.65}
+        pos_hint: {'x': 0.45, 'center_y': 0.65}
+        font_size: 20    
+
+    Label:
+        id: player1_points
+        text: '-'
+        size_hint: .5, .5
+        pos_hint: {'x': 0.05, 'center_y': 0.65}
+        font_size: 20    
 
     Label:
         id: player2_points
-        text: '10'
+        text: '-'
         size_hint: .5, .5
-        pos_hint: {'x': 0.5, 'center_y': 0.65}
+        pos_hint: {'x': 0.55, 'center_y': 0.65}
+        font_size: 20
+
+    Label:
+        id: player1_turn
+        text: '-'
+        size_hint: .2, .2
+        pos_hint: {'x': 0.15, 'center_y': 0.35}
+        font_size: 30 
+
+    Label:
+        id: player2_turn
+        text: '-'
+        size_hint: .5, .5
+        pos_hint: {'x': 0.5, 'center_y': 0.35}
+        font_size: 30
         
 
         
@@ -78,7 +106,8 @@
                 text: '-'    
             Button:
                 id: player1_hp_up
-                text:'+'
+                text:'+ 25'
+                on_press: root.hp1() 
             Label:
                 text: 'Damage'
             Label:
@@ -86,7 +115,8 @@
                 text: '-'    
             Button:
                 id: player1_dmg_up
-                text:'+'
+                text:'+   5'
+                on_press: root.dmg1()
                 
             Label:
                 text: 'Crit, %'
@@ -95,16 +125,15 @@
                 text: '-'    
             Button:
                 id: player1_crit_up
-                text:'+'
+                text:'+ 3%'
+                on_press: root.crit1()
                 
             Label:
                 text: 'Crit mod'
             Label:
                 id: player1_critm
                 text: '-'    
-            Button:
-                id: player1_critm_up
-                text:'+'
+            
                              
 
     AnchorLayout
@@ -121,7 +150,8 @@
                 text: '-'    
             Button:
                 id: player2_hp_up
-                text:'+'
+                text:'+ 25'
+                on_press: root.hp2()
             Label:
                 text: 'Damage'
             Label:
@@ -129,7 +159,8 @@
                 text: '-'    
             Button:
                 id: player2_dmg_up
-                text:'+'
+                text:'+   5'
+                on_press: root.dmg2()
                 
             Label:
                 text: 'Crit, %'
@@ -138,16 +169,15 @@
                 text: '-'    
             Button:
                 id: player2_crit_up
-                text:'+'
+                text:'+ 3%'
+                on_press: root.crit2()
                 
             Label:
                 text: 'Crit mod'
             Label:
                 id: player2_critm
                 text: '-'    
-            Button:
-                id: player2_critm_up
-                text:'+'
+            
 
     AnchorLayout
         anchor_x: 'left'
